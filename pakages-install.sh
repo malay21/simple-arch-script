@@ -5,15 +5,6 @@
 clear
 
 
-#base install
-pacstrap /mnt base base-devel linux linux-firmware git vim
-genfstab -U /mnt >> /mnt/etc/fstab
-
-
-#enter chroot environment
-arch-chroot /mnt
-
-
 #create swapfile
 dd if=/dev/zero of=/swapfile bs=1M count=1024 status=progress
 chmod 600 /swapfile
@@ -39,11 +30,11 @@ echo root:123 | chpasswd
 
 
 #plasma pakages
-pacman -S bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma 
+pacman -S --noconfirm bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma 
 
 
 #nvidia pakages
-pacman -S nvidia nvidia-utils
+pacman -S --noconfirm nvidia nvidia-utils
 
 
 #grub-install
