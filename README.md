@@ -3,7 +3,7 @@ arch script to setup my own device , dont run this script without changing varia
 
 - notes
 
-    network connection and partitioning should be done manually before running script
+   = network connection and partitioning should be done manually before running script
     
  ----------
 
