@@ -22,7 +22,7 @@ echo "127.0.1.1 linuxbox" >> /etc/hosts
 echo root:123 | chpasswd
 
 #plasma pakages
-pacman -S bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole libappindicator-gtk3 networkmanager ntfs-3g plasma 
+pacman -S bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma 
 
 #nvidia pakages
 pacman -S nvidia nvidia-utils
