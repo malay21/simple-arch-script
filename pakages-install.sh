@@ -7,7 +7,7 @@ hname="linuxbox"
 rootpaswd="123"
 usrname="zirotu"
 usrpasswd="123"
-
+efidir="/boot/efi"
 
 #cleans tty window
 clear
@@ -48,7 +48,7 @@ pacman -S --noconfirm nvidia nvidia-utils
 
 
 #grub-install
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=$efidir --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #enable system services
