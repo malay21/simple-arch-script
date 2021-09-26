@@ -4,9 +4,6 @@
 #cleans tty window
 clear
 
-#enter chroot environment
-arch-chroot /mnt
-
 
 #create swapfile
 dd if=/dev/zero of=/swapfile bs=1M count=1024 status=progress
