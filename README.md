@@ -1,2 +1,2 @@
 # simple-arch-script
-arch script to setup my own device
+arch script to setup my own device , dont run this script without reading don't blame me for any damage
