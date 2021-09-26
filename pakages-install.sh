@@ -30,11 +30,11 @@ echo root:123 | chpasswd
 
 
 #plasma pakages
-pacman -S bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma 
+pacman -S --noconfirm bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma 
 
 
 #nvidia pakages
-pacman -S nvidia nvidia-utils
+pacman -S --noconfirm nvidia nvidia-utils
 
 
 #grub-install
