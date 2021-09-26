@@ -8,7 +8,8 @@ clear
 pacstrap /mnt base base-devel linux linux-firmware git vim amd-ucode
 genfstab -U /mnt >> /mnt/etc/fstab
 
-
+#enter chroot environment
+arch-chroot /mnt
 #set timezone
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
