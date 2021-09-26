@@ -1,8 +1,17 @@
 
 #!/usr/bin/env -S bash -e
 
+variables:
+locale="en_US"
+hname="linuxbox"
+rootpaswd="123"
+usrname="zirotu"
+usrpasswd="123"
+
+
 #cleans tty window
 clear
+
 
 
 #create swapfile
@@ -18,15 +27,16 @@ ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
 
 
-#setlanguage & networking
-sed -i '177s/.//' /etc/locale.gen
-locale-gen
-echo "LANG=en_US.UTF-8" >> /etc/locale.conf
-hostnamectl set-hostname linuxbox
+#setlanguage
+echo "$locale.UTF-8 UTF-8"  > /mnt/etc/locale.gen
+echo "LANG=$locale.UTF-8" > /mnt/etc/locale.conf
+
+#networking
+hostnamectl set-hostname $hname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
-echo "127.0.1.1 linuxbox" >> /etc/hosts
-echo root:123 | chpasswd
+echo "127.0.1.1 $hname" >> /etc/hosts
+echo root:$rootpaswd | chpasswd
 
 
 #plasma pakages
@@ -44,6 +54,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #enable system services
 systemctl enable sddm NetworkManager bluetooth
 
-useradd -m zirotu
-echo zirotu:123 | chpasswd
-usermod -aG wheel zirotu
+useradd -m $usrname
+echo $usrname:$usrpasswd | chpasswd
+usermod -aG wheel $usrname
