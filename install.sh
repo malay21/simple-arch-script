@@ -4,26 +4,35 @@
 #cleans tty window
 clear
 
-#Selecting a kernel to install. 
+#base install
+pacstrap /mnt base base-devel linux linux-firmware git vim amd-ucode
+genfstab -U /mnt >> /mnt/etc/fstab
 
-kernel_selector () {
-    echo "List of kernels available: "
-    echo "1) Stable (pakage:linux)              — Vanilla Linux kernel"
-    echo "2) Hardened (pakage:linux-hardened)   — security-focused kernel."
-    echo "3) Longterm (pakage:linux-lts)        — Long-term support (LTS) Linux kernel and modules."
-    echo "4) Zen Kernel (pakage:linux-zen)      — Optimized for desktop usage."
-    read -r -p "Insert the number of kernel: " choice
-    echo "$choice is selected"
-    case $choice in
-        1 ) kernel=linux
-            ;;
-        2 ) kernel=linux-hardened
-            ;;
-        3 ) kernel=linux-lts
-            ;;
-        4 ) kernel=linux-zen
-            ;;
-        * ) echo "You did not enter a valid selection."
-            kernel_selector
-    esac
-}
+
+#set timezone
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+hwclock --systohc
+
+#setlanguage & networking
+echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+hostnamectl set-hostname linuxbox
+echo "127.0.0.1 localhost" >> /etc/hosts
+echo "::1       localhost" >> /etc/hosts
+echo "127.0.1.1 linuxbox" >> /etc/hosts
+echo root:123 | chpasswd
+
+#plasma pakages
+pacman -S bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole libappindicator-gtk3 networkmanager ntfs-3g plasma 
+
+#nvidia pakages
+pacman -S nvidia nvidia-utils
+
+#grub-install
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+
+systemctl enable sddm NetworkManager bluetooth
+
+useradd -m zirotu
+echo zirotu:123 | chpasswd
+usermod -aG wheel zirotu
