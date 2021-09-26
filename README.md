@@ -7,7 +7,7 @@ arch script to setup my own device , dont run this script without changing varia
     
  ----------
     
-    my system partitions
+my system partitions
     
       /dev/sda1 (boot) - 512 MB  - /mnt/boot/efi
       /dev/sda2 (/)    - 245 GB  - /mnt
