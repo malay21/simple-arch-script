@@ -57,3 +57,7 @@ systemctl enable sddm NetworkManager bluetooth
 useradd -m $usrname
 echo $usrname:$usrpasswd | chpasswd
 usermod -aG wheel $usrname
+
+
+#selfdestruct after installation is complete
+rm -- "$0"
