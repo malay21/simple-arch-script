@@ -28,6 +28,8 @@ hwclock --systohc
 
 
 #setlanguage & networking
+sed -i '177s/.//' /etc/locale.gen
+locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 hostnamectl set-hostname linuxbox
 echo "127.0.0.1 localhost" >> /etc/hosts
