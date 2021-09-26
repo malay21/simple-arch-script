@@ -6,7 +6,7 @@ clear
 
 
 #base install
-pacstrap /mnt base base-devel linux linux-firmware git vim amd-ucode
+pacstrap /mnt base base-devel linux linux-firmware git vim
 genfstab -U /mnt >> /mnt/etc/fstab
 
 
