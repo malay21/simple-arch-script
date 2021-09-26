@@ -1,3 +1,9 @@
+
+#!/usr/bin/env -S bash -e
+
+#cleans tty window
+clear
+
 #enter chroot environment
 arch-chroot /mnt
 
