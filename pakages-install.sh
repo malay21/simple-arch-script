@@ -52,7 +52,7 @@ grub-install --target=x86_64-efi --efi-directory=$efidir --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #enable system services
-systemctl enable sddm NetworkManager bluetooth
+systemctl enable sddm NetworkManager bluetooth firewalld
 
 useradd -m $usrname
 echo $usrname:$usrpasswd | chpasswd
