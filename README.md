@@ -1,5 +1,5 @@
 # simple-arch-script
-arch script to setup my own device , dont run this script without reading don't blame me for any damage
+arch script to setup my own device , dont run this script without changing variables according to your device don't blame me for any damage
 
 - notes
 
