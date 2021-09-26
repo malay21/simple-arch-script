@@ -44,7 +44,7 @@ pacman -S --noconfirm bluez bluez-utils dolphin efibootmgr firefox firewalld gru
 
 
 #nvidia pakages
-pacman -S --noconfirm nvidia nvidia-utils
+pacman -S --noconfirm nvidia nvidia-utils nvidia-prime
 
 
 #grub-install
