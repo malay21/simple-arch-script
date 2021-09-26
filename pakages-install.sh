@@ -40,7 +40,7 @@ echo root:$rootpaswd | chpasswd
 
 
 #plasma pakages
-pacman -S --noconfirm bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma 
+pacman -S --noconfirm bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma discord flameshot
 
 
 #nvidia pakages
