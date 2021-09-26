@@ -3,8 +3,9 @@ arch script to setup my own device , dont run this script without changing varia
 
 - notes
 
-    partitions are supposed to be manually created and mounted by the user and mount in the follwing manner or else script will fail
+    network connection and partitioning should be done manually before running script
     
+ ----------
     
     my system partitions
     
