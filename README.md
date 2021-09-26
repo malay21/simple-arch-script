@@ -13,6 +13,6 @@ dont run this script without changing variables according to your device don't b
  
   * my system partitions
     '''
-      /dev/sda1 (boot) - 512 MB  - /mnt/boot/efi
-      /dev/sda2 (/)    - 245 GB  - /mnt
+    /dev/sda1 (boot) - 512 MB  - /mnt/boot/efi
+    /dev/sda2 (/)    - 245 GB  - /mnt
     '''
