@@ -8,14 +8,14 @@ rootpaswd="123"
 usrname="zirotu"
 usrpasswd="123"
 efidir="/boot/efi"
-
+swapsize=1024
 #cleans tty window
 clear
 
 
 
 #create swapfile
-dd if=/dev/zero of=/swapfile bs=1M count=1024 status=progress
+dd if=/dev/zero of=/swapfile bs=1M count=$swapsize status=progress
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
