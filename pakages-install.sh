@@ -52,8 +52,9 @@ pacman -S --noconfirm nvidia nvidia-utils nvidia-prime lib32-nvidia-utils
 
 
 #grub-install
-grub-install --target=x86_64-efi --efi-directory=$efidir --bootloader-id=GRUB
+grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=$efidir
 grub-mkconfig -o /boot/grub/grub.cfg
+
 
 #enable system services
 systemctl enable sddm NetworkManager bluetooth firewalld
@@ -62,6 +63,10 @@ useradd -m $usrname
 echo $usrname:$usrpasswd | chpasswd
 usermod -aG wheel $usrname
 
-
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+#paru installation
+su $usrname
+git clone https://aur.archlinux.org/paru-bin /tmp && cd /tmp && makepkg -si
+exit
 #selfdestruct after installation is complete
 rm -- "$0"
