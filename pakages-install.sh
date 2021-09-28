@@ -1,6 +1,6 @@
 #!/usr/bin/env -S bash -e
 
-variables:
+#variables:
 locale="en_US"
 hname="linuxbox"
 rootpaswd="123"
