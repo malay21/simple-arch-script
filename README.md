@@ -16,7 +16,7 @@ dont run this script without changing variables according to your device don't b
         chmod +x *
         
         ./base-install.sh
-    `
+  
 
 - notes
 
