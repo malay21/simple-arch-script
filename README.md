@@ -8,7 +8,7 @@ dont run this script without changing variables according to your device don't b
 ----------
 - how to use ?
   * after setting up network and partitions type this commands
-    ` 
+   
         git clone https://github.com/malay21/simple-arch-script 
         
         cd simple-arch-script
