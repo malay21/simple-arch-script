@@ -28,8 +28,8 @@ hwclock --systohc
 
 
 #setlanguage
-echo "$locale.UTF-8 UTF-8"  > /mnt/etc/locale.gen
-echo "LANG=$locale.UTF-8" > /mnt/etc/locale.conf
+echo "$locale.UTF-8 UTF-8"  > /etc/locale.gen
+echo "LANG=$locale.UTF-8" > /etc/locale.conf
 
 #networking
 hostnamectl set-hostname $hname
