@@ -30,7 +30,7 @@ hwclock --systohc
 #setlanguage
 echo "$locale.UTF-8 UTF-8"  > /etc/locale.gen
 echo "LANG=$locale.UTF-8" > /etc/locale.conf
-
+locale-gen
 #networking
 hostnamectl set-hostname $hname
 echo "127.0.0.1 localhost" >> /etc/hosts
