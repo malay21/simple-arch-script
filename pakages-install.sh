@@ -38,13 +38,17 @@ echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 $hname" >> /etc/hosts
 echo root:$rootpaswd | chpasswd
 
+#enable multilib for lutris
+sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+pacman -Syy
+
 
 #plasma pakages
-pacman -S --noconfirm bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma discord flameshot
+pacman -S --noconfirm bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma discord flameshot lutris wine
 
 
 #nvidia pakages
-pacman -S --noconfirm nvidia nvidia-utils nvidia-prime
+pacman -S --noconfirm nvidia nvidia-utils nvidia-prime lib32-nvidia-utils
 
 
 #grub-install
