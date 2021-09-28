@@ -5,6 +5,15 @@ arch script to setup very simple installation
 
 dont run this script without changing variables according to your device don't blame me for any damage
 
+----------
+- how to use ?
+  * after setting up network and partitions type this commands
+  *  ''' git clone https://github.com/malay21/simple-arch-script 
+  *      cd simple-arch-script
+  *      chmod +x *
+  *      ./base-install.sh
+  *  '''
+
 - notes
 
   * network connection and partitioning should be done manually before running script
