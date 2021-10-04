@@ -65,8 +65,9 @@ usermod -aG wheel $usrname
 
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 #paru installation
-su $usrname
-git clone https://aur.archlinux.org/paru-bin /tmp && cd /tmp && makepkg -si
+
+git clone https://aur.archlinux.org/paru-bin /tmp && cd /tmp
+su -c "makepkg -si" $usrname
 exit
 #selfdestruct after installation is complete
 rm -- "$0"
