@@ -44,7 +44,7 @@ pacman -Syy
 
 
 #plasma pakages
-pacman -S --noconfirm bluez bluez-utils dolphin efibootmgr firefox firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma discord flameshot lutris wine
+pacman -S --noconfirm bluez bluez-utils dolphin efibootmgr firewalld grub konsole kget libappindicator-gtk3 networkmanager ntfs-3g plasma Spectacle
 
 
 #nvidia pakages
