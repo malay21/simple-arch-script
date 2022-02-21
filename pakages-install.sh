@@ -44,8 +44,7 @@ pacman -Syy
 
 
 #plasma pakages
-pacman -S --noconfirm bluez bluez-utils dolphin efibootmgr firewalld grub konsole libappindicator-gtk3 networkmanager ntfs-3g plasma flameshot
-
+pacman -S --noconfirm bluez bluez-utils pcmanfm efibootmgr grub networkmanager bspwm dunst feh kitty lxappearance mpc picom rofi scrot sxhkd ttf-ubuntu-font-family xorg-xsetroot brightnessctl sddm git
 
 #nvidia pakages
 pacman -S --noconfirm nvidia nvidia-utils nvidia-prime lib32-nvidia-utils
@@ -57,7 +56,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 
 #enable system services
-systemctl enable sddm NetworkManager bluetooth firewalld
+systemctl enable sddm NetworkManager 
 
 useradd -m $usrname
 echo $usrname:$usrpasswd | chpasswd
